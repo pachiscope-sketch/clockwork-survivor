@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5df7c430bb7615e49b207c6ce1d186a9, type: 3}
+  m_Name: Shooter
+  m_EditorClassIdentifier: Assembly-CSharp::ClockworkSurvivor.EnemyConfig
+  enemyName: Shooter
+  behavior: 2
+  prefab: {fileID: 8354744521487967623, guid: b7c9bdff0c8470743b3b1a3173d14631, type: 3}
+  projectilePrefab: {fileID: 6749538704739757023, guid: 5dd6a0ba7a8fc0d4792ea0def5ff0a48, type: 3}
+  experiencePrefab: {fileID: 2542070703956554611, guid: 9d077bd388b5a1c468dd138caa6c332e, type: 3}
+  tint: {r: 0.25, g: 0.55, b: 1, a: 1}
+  maxHealth: 16
+  moveSpeed: 2.5
+  contactDamage: 5
+  contactCooldown: 0.8
+  experienceValue: 3
+  unlockAfterSeconds: 55
+  spawnWeight: 0.35
+  dashRange: 6
+  dashSpeed: 10
+  dashDuration: 0.32
+  dashCooldown: 2.4
+  preferredDistance: 7
+  projectileDamage: 7
+  projectileSpeed: 8
+  shootCooldown: 1.7

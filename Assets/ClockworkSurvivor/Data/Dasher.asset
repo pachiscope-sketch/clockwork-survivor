@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5df7c430bb7615e49b207c6ce1d186a9, type: 3}
+  m_Name: Dasher
+  m_EditorClassIdentifier: Assembly-CSharp::ClockworkSurvivor.EnemyConfig
+  enemyName: Dasher
+  behavior: 1
+  prefab: {fileID: 9169599886568339803, guid: 2343c736124f1c246b50c9567104dac5, type: 3}
+  projectilePrefab: {fileID: 0}
+  experiencePrefab: {fileID: 2542070703956554611, guid: 9d077bd388b5a1c468dd138caa6c332e, type: 3}
+  tint: {r: 0.95, g: 0.78, b: 0.18, a: 1}
+  maxHealth: 10
+  moveSpeed: 3.8
+  contactDamage: 12
+  contactCooldown: 0.8
+  experienceValue: 2
+  unlockAfterSeconds: 28
+  spawnWeight: 0.5
+  dashRange: 6
+  dashSpeed: 10
+  dashDuration: 0.32
+  dashCooldown: 2.4
+  preferredDistance: 7
+  projectileDamage: 7
+  projectileSpeed: 8
+  shootCooldown: 1.7

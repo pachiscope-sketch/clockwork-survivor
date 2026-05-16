@@ -21,7 +21,7 @@ Unity実績づくり向けの小型プロジェクトです。歯車仕掛けの
 
 ## 初回セットアップ
 
-このプロジェクトをUnity 6000.3.2f1以降で開くと、`Assets/Scenes/ClockworkSurvivor.unity` が自動生成されます。
+このプロジェクトをUnity 6000.4.7f1以降で開くと、`Assets/Scenes/ClockworkSurvivor.unity` が自動生成されます。
 
 自動生成されない場合は、Unityメニューから次を実行してください。
 
