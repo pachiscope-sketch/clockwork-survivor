@@ -1,0 +1,40 @@
+name: Docker Unity WebGL Build
+
+on:
+  workflow_dispatch:
+
+jobs:
+  webgl:
+    name: Build WebGL in Docker
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build Unity builder image
+        run: docker build --pull -t clockwork-survivor-unity-builder .
+
+      - name: Build WebGL
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+        run: |
+          if [ -z "${UNITY_LICENSE}" ]; then
+            echo "::error::Set the UNITY_LICENSE repository secret before running this workflow."
+            exit 1
+          fi
+
+          docker run --rm \
+            -e UNITY_LICENSE="${UNITY_LICENSE}" \
+            -e BUILD_TARGET=WebGL \
+            -e BUILD_PATH=/workspace/Builds/WebGL \
+            -v "${{ github.workspace }}/Builds:/workspace/Builds" \
+            clockwork-survivor-unity-builder
+
+      - name: Upload WebGL artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: clockwork-survivor-webgl
+          path: Builds/WebGL
+          if-no-files-found: error
